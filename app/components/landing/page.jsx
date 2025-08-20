@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import Nav from './nav';
 import Hero from './hero';
 import About from './about';
 import Services from './services';
@@ -6,6 +7,7 @@ import Pricing from './pricing';
 import Testimonial from './testimonial';
 import Footer from './footer';
 import { motion } from 'framer-motion';
+
 
 
 
