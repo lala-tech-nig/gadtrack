@@ -1,12 +1,14 @@
 "use client";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <section className="pt-14 pb-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        {/* Text Content */}
+        {/* Left: Text Content */}
         <div>
           <motion.h2
             className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight"
@@ -14,7 +16,7 @@ export default function Hero() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            Buy and sell used tech gadgets with confidence
+            Buy and sell used tech gadgets safely
           </motion.h2>
 
           <motion.p
@@ -25,8 +27,8 @@ export default function Hero() {
           >
             DeviceVerify helps Nigerians securely trade second-hand electronics — phones, laptops, tablets,
             and more. Instantly check a device’s status, track its ownership history, and confirm it’s not
-            stolen before buying. Sellers can update statuses or transfer ownership seamlessly, giving both
-            parties peace of mind.
+            stolen before buying. Sellers can update device statuses or transfer ownership seamlessly, giving
+            both parties peace of mind.
           </motion.p>
 
           <motion.div
@@ -35,12 +37,12 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35 }}
           >
-            <a
-              href="#"
+            <button
+              onClick={() => router.push("/login")}
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-indigo-600 to-emerald-400 text-white font-semibold shadow-lg"
             >
               Try Device Lookup
-            </a>
+            </button>
             <a
               href="#pricing"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-200 text-sm"
@@ -61,7 +63,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Device Card Preview */}
+        {/* Right: Device Card Preview */}
         <div className="relative">
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
@@ -70,6 +72,7 @@ export default function Hero() {
             className="w-full rounded-2xl shadow-2xl overflow-hidden border border-slate-100 bg-white"
           >
             <div className="p-6">
+              {/* Header */}
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-xs text-slate-400">Device Lookup</div>
@@ -83,6 +86,7 @@ export default function Hero() {
                 </div>
               </div>
 
+              {/* Device Details */}
               <div className="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-600">
                 <div className="space-y-2">
                   <div className="font-semibold">Category</div>
@@ -99,6 +103,7 @@ export default function Hero() {
                 </div>
               </div>
 
+              {/* Action */}
               <div className="mt-6 flex items-center justify-between">
                 <button className="px-4 py-2 rounded-md bg-indigo-600 text-white">
                   Request Ownership Transfer
