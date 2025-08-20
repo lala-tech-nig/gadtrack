@@ -1,3 +1,4 @@
+"use client";
 export default function Pricing() {
 const plans = [
 { name: 'Free', price: '₦0', bullets: ['1 IMEI check / month', 'Basic status', 'Community support'] },

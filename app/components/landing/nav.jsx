@@ -1,3 +1,4 @@
+"use client";
 export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
