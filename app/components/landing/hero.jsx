@@ -14,7 +14,7 @@ export default function Hero() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            Buy and sell tech gadgets with confidence
+            Buy and sell used tech gadgets with confidence
           </motion.h2>
 
           <motion.p
