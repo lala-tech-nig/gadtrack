@@ -4,9 +4,11 @@ import Hero from './hero';
 import About from './about';
 import Services from './services';
 import Pricing from './pricing';
+import Partners from './Partners';
 import Testimonial from './testimonial';
 import Footer from './footer';
 import { motion } from 'framer-motion';
+
 
 
 
@@ -21,6 +23,7 @@ export default function App() {
           <About />
           <Services />
           <Pricing />
+          <Partners />
           <Testimonial />
         </motion.div>
       </main>
