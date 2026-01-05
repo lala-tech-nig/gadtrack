@@ -133,7 +133,7 @@ export default function DeviceTraceDashboard() {
         </header>
 
         <section className="mb-10">
-          <h1 className="text-3xl font-bold mb-1">Welcome back, Chinedu</h1>
+          <h1 className="text-3xl font-bold mb-1">Welcome back, LALA TECH</h1>
           <p className="text-gray-400 text-sm">Here is an overview of your inventory and recent activities.</p>
         </section>
 
