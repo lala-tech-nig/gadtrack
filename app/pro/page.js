@@ -109,7 +109,7 @@ export default function DeviceTraceDashboard() {
              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Chinedu" alt="avatar" />
           </div>
           <div>
-            <p className="text-sm font-bold">Chinedu Okafor</p>
+            <p className="text-sm font-bold">LALA TECH</p>
             <p className="text-[10px] text-gray-500 uppercase font-bold">Verified Seller</p>
           </div>
         </div>
