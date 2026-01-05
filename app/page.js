@@ -22,7 +22,7 @@ const staggerContainer = {
 
 // --- Components ---
 
-const Navbar = () => (
+const Navbar = ({ router }) => (
   <motion.nav 
     initial={{ y: -100 }}
     animate={{ y: 0 }}
@@ -47,8 +47,14 @@ const Navbar = () => (
       ))}
     </div>
     <div className="flex items-center gap-4">
-      <button className="px-5 py-2 text-sm font-semibold text-slate-700 hover:text-orange-600 transition">Login</button>
+      <button 
+        onClick={() => router.push("/login")}
+        className="px-5 py-2 text-sm font-semibold text-slate-700 hover:text-orange-600 transition"
+      >
+        Login
+      </button>
       <motion.button 
+        onClick={() => router.push("/login")}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="px-5 py-2 text-sm font-semibold text-white bg-orange-600 rounded-lg shadow-lg shadow-orange-200 hover:bg-orange-700"
@@ -94,9 +100,11 @@ const StepCard = ({ number, title, desc, icon: Icon }) => (
 // --- Main Page ---
 
 export default function LandingPage() {
+  const router = useRouter();
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-orange-100 selection:text-orange-600">
-      <Navbar />
+      <Navbar router={router} />
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 pt-12 pb-24 grid lg:grid-cols-2 gap-12 items-center">
@@ -118,6 +126,7 @@ export default function LandingPage() {
           </motion.p>
           <motion.div variants={fadeIn} className="flex flex-wrap gap-4 mb-6">
             <motion.button 
+              onClick={() => router.push("/login")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 px-8 py-4 bg-orange-600 text-white font-bold rounded-xl shadow-xl shadow-orange-200"
@@ -126,6 +135,7 @@ export default function LandingPage() {
               Register Device
             </motion.button>
             <motion.button 
+              onClick={() => router.push("/login")}
               whileHover={{ backgroundColor: "#f8fafc" }}
               className="flex items-center gap-2 px-8 py-4 bg-white border-2 border-slate-100 text-slate-800 font-bold rounded-xl"
             >
@@ -239,6 +249,7 @@ export default function LandingPage() {
             <p className="text-orange-100 text-lg max-w-md">Join thousands of Nigerians protecting their digital assets today. It takes less than 2 minutes.</p>
           </div>
           <motion.button 
+            onClick={() => router.push("/login")}
             whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)" }}
             whileTap={{ scale: 0.95 }}
             className="bg-white text-orange-600 px-10 py-5 rounded-2xl font-bold text-lg whitespace-nowrap"
